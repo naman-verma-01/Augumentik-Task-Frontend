@@ -11,3 +11,195 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pageTitle {
+  text-align: center;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+section:nth-child(1),section:nth-child(2){
+  min-height: 100vh;
+  margin: 0;
+}
+
+section:nth-child(1){
+  background-image: url("https://letithappen.pl/wp-content/uploads/2019/01/IMG_9409.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 130%;
+  background-color: #0d0d0d;
+  background-blend-mode: black; 
+  
+}
+section:nth-child(2){
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 130%;
+  background-color: #e3e3e3;
+  
+}
+
+.section1{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+
+
+
+.slideShow {
+  width: 50vw;
+	min-height: 500px;
+	overflow: hidden;
+	position: relative;
+  margin-top: 25px;
+}
+
+.slide {
+	width: 70%;
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+  margin-left: 7vw;
+  box-shadow: 1px 1px 100px 1px #000000;
+  
+}
+
+.slideImg {
+	height: 100%;
+  width: 500px ;
+  box-shadow: 20px 20px 100px 10px #000000;
+  
+}
+
+img.slideImg{
+  width: 500px; height: 500px; object-fit: cover;
+}
+
+.slideShow:hover .slideArrow {
+	opacity: 1;
+}
+
+.slideShow:hover .slidePositionWrapper {
+	opacity: 1;
+}
+
+.slideArrow {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    line-height: 0;
+    cursor: pointer;
+    color: #ffffff50;
+    transition: all 0.5s;
+    z-index: 20;
+}
+
+.slideArrow:hover {
+    color: white;
+}
+
+.arrowRight {
+    right: 5%;
+}
+
+.arrowLeft {
+    left: 5%;
+}
+
+.slidePositionWrapper {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	top: 90%;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.positionIndicator {
+	display: inline-block;
+	width: 0.8rem;
+	height: 0.8rem;
+	margin: 0 0.5rem;
+	background: #ffffff50;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+
+.positionIndicator:hover {
+	background: white;
+}
+
+.slideLabel {
+	display: inline-block;
+}
+
+.autoSlide {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1rem;
+	z-index: 20;
+}
+
+@keyframes slideOutLeft {
+    from { transform: translate(0, 0) }
+    to { transform: translate(-100%, 0) }
+}
+
+@keyframes slideInLeft {
+    from { transform: translate(100%, 0) }
+    to { transform: translate(0, 0) }
+}
+
+@keyframes slideOutRight {
+    from { transform: translate(0, 0) }
+    to { transform: translate(100%, 0) }
+}
+
+@keyframes slideInRight {
+    from { transform: translate(-100%, 0) }
+    to { transform: translate(0, 0) }
+}
+
+
+
+
+
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0,0,0, 0.5);
+}
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  background: white;
+}
